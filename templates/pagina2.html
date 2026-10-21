@@ -6,7 +6,11 @@
     <title>Seu Treino - Bem-vindo</title>
 </head>
 <body>
-    <h1>Bem-vindo à segunda página, {{ usuario }}!</h1>
+    <h1>Você está na segunda página!</h1>
+    <p>Bem-vindo, {{ usuario }}!</p>
+
+    <a href="{{ url_for('inicio') }}">Voltar para o início</a>
+
     <form method="post" action="{{ url_for('sair') }}">
         <button type="submit">Sair</button>
     </form>

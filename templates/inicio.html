@@ -7,31 +7,44 @@
 </head>
 <body>
     <h1>Seu Treino</h1>
-    <h2>Login</h2>
 
-    {% for mensagem in get_flashed_messages() %}
-        <p>{{ mensagem }}</p>
-    {% endfor %}
+    <section aria-labelledby="titulo-login">
+        <h2 id="titulo-login">Login</h2>
 
-    <form method="post" action="{{ url_for('inicio') }}">
-        <label for="usuario">Usuário:</label>
-        <input id="usuario" name="usuario" autocomplete="username" required>
+        {% for mensagem in get_flashed_messages() %}
+            <p>{{ mensagem }}</p>
+        {% endfor %}
 
-        <label for="senha">Senha:</label>
-        <input id="senha" name="senha" type="password" autocomplete="current-password" required>
+        <form method="post" action="{{ url_for('inicio') }}">
+            <label for="usuario">Usuário:</label>
+            <input id="usuario" name="usuario" autocomplete="username" required>
 
-        <button type="submit">Entrar</button>
-    </form>
+            <label for="senha">Senha:</label>
+            <input id="senha" name="senha" type="password" autocomplete="current-password" required>
 
-    <h2>Criar conta</h2>
-    <form method="post" action="{{ url_for('cadastrar') }}">
-        <label for="novo-usuario">Usuário:</label>
-        <input id="novo-usuario" name="usuario" autocomplete="username" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
 
-        <label for="nova-senha">Senha:</label>
-        <input id="nova-senha" name="senha" type="password" autocomplete="new-password" required>
+    <section aria-labelledby="titulo-cadastro">
+        <h2 id="titulo-cadastro">Criar conta</h2>
 
-        <button type="submit">Cadastrar</button>
-    </form>
+        <form method="post" action="{{ url_for('cadastrar') }}">
+            <label for="novo-usuario">Usuário:</label>
+            <input id="novo-usuario" name="usuario" autocomplete="username" required>
+
+            <label for="nova-senha">Senha:</label>
+            <input id="nova-senha" name="senha" type="password" autocomplete="new-password" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <section aria-labelledby="titulo-navegacao">
+        <h2 id="titulo-navegacao">Navegação</h2>
+        <form action="{{ url_for('pagina2') }}" method="get">
+            <button type="submit">Ir para outra página</button>
+        </form>
+    </section>
 </body>
 </html>
