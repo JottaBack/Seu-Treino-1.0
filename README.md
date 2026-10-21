@@ -23,3 +23,6 @@ O script `sync_to_github.ps1` cria um commit e envia ao GitHub as alterações
 feitas neste repositório. Ele deve ser executado pela tarefa agendada do Windows
 a cada 10 minutos. Não coloque senhas, tokens ou outros dados privados nesta
 pasta: os commits são publicados no repositório público.
+
+A sincronização automática ocorre enquanto o Windows estiver ligado e sua conta
+estiver conectada.
