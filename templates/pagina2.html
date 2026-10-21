@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seu Treino - Bem-vindo</title>
+</head>
+<body>
+    <h1>Bem-vindo à segunda página, {{ usuario }}!</h1>
+    <form method="post" action="{{ url_for('sair') }}">
+        <button type="submit">Sair</button>
+    </form>
+</body>
+</html>
